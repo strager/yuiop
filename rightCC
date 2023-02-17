@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-set -u
-
-cc -include rightCC.h -x c "${1}"
-shift
-exec ./a.out "${@}"
