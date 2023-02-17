@@ -1,0 +1,3 @@
+i mn() {
+    p("hllo, you\n");
+}
