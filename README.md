@@ -1,5 +1,59 @@
 # yuiop
 
+## statements
+
+### `loop`
+
+`loop` begins a loop statement. The body of the loop
+follows the `loop` keyword and must be enclosed in `{` and
+`}`. The loop can be exited with the `noloop` statement.
+
+```c
+loop {
+    /* ... */
+}
+```
+
+See `yup.yuiop` for an example of `loop`.
+
+### `noloop`
+
+`noloop` stops the inner-most `loop` statement.
+
+`noloop` must be terminated by a `;`.
+
+`noloop` often appears inside of an `on` statement to
+conditionally exit the loop.
+
+```c
+loop {
+    /* ... */
+    on (/* ... */) {
+        noloop;
+    }
+    /* ... */
+}
+```
+
+See `ho.yuiop` for an example of `noloop`.
+
+### `on`
+
+`on` begins a conditional statement. The condition follows
+the `on` keyword and must be enclosed in `(` and `)`. The
+body, which is only executed if the condition is true, must
+be enclosed in `{` and `}`.
+
+```c
+Yoyo in = in_h();
+on (in == 'y') {
+    p_yoyo("yup.\n");
+}
+on (in == 'n') {
+    p_yoyo("nop.\n");
+}
+```
+
 ## standard types
 
 ### `I`
