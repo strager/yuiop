@@ -4,6 +4,12 @@
 developers. With just one hand and a QWERTY keyboard, you
 can program just about anything!
 
+```c
+Nop mn() {
+    p_yoyo("hllo, you\n");
+}
+```
+
 See [COPYING](./COPYING) for copyright and licensing information.
 
 ## install
