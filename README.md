@@ -3,9 +3,9 @@
 ## examples
 
     $ ./yuiop hllo.yuiop   # The classic.
-    $ ./yuiop put.yuiop    # 'cat' clone.
-    $ ./yuiop yup.yuiop    # 'yes' clone. Press CTRL-C.
+    $ ./yuiop put.yuiop    # 'cat' clone. Press CTRL-D.
     $ ./yuiop ho.yuiop hi  # 'echo' clone.
+    $ ./yuiop yup.yuiop    # 'yes' clone. Press CTRL-C.
 
 ## statements
 
