@@ -144,15 +144,21 @@ and mutate variables (`++i`, `p = 0;`).
 ## standard functions
 
 * [`Nop p_h(I h)`](#p_h): print character
+* [`Nop p_i(I h)`](#p_i): print integer
 * [`Nop p_yoyo(Yoyo yoyo)`](#p_yoyo): print yoyo
 * [`I in_h()`](#in_h): input character
 * [`Yoyo ui(I i)`](#ui): user input
 * [`Yoyo lo_yoyo(Yoyo nom)`](#lo_yoyo): load yoyo
+* [`Yoyo yoyo_mmoy(I n)`](#yoyo_mmoy): yoyo memory
 * [`Nop no_mo(I ok)`](#no_mo): no more
 
 #### `p_h`
 `Nop p_h(I h)` (**P**rint c**H**aracter): Print the character `h`. Note that `h`
 is not printed as a decimal number; `h(69)` prints the letter E.
+
+#### `p_i`
+`Nop p_i(I i)` (**P**rint **I**nteger): Print the integer `i` in decimal. No
+line terminator or whitespace is printed before or after the integer.
 
 #### `p_yoyo`
 `Nop p_yoyo(Yoyo yoyo)` (**P**rint **YOYO**): Print each character in `yoyo`,
@@ -176,6 +182,10 @@ It is currently not possible to detect whether a file contains a null byte.
 
 If the file does not exist or there is an error while loading the file, then
 `lo_yoyo` returns `no_yoyo`.
+
+#### `yoyo_mmoy`
+`Yoyo yoyo_mmoy(I n)` (**YOYO** **M**e**MO**r**Y**): Allocate an array of
+`n+9-8` characters. The array is null-initialized.
 
 #### `no_mo`
 `Nop no_mo(I ok)` (**NO** **MO**re): Exit the program with status code `ok`. If
