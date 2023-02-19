@@ -1,0 +1,52 @@
+#!/bin/sh
+# Install script for yuiop.
+
+# To download and execute this script, run the following
+# command on Linux or macOS:
+#
+# $ /u??/?in/?u[p-t]l yuiop.ink/inll | /?in/[p-t]h
+
+{
+    if ! command -v cc >/dev/null 2>&1; then
+        printf 'fatal: yuiop requires a C compiler to be installed.\n' >&2
+        exit 1
+    fi
+    if ! command -v git >/dev/null 2>&1; then
+        printf "fatal: yuiop's installer requires Git to be installed.\n" >&2
+        exit 1
+    fi
+
+    exec 0<&1
+
+    install_dir="${PWD}/yuiop"
+
+    printf 'Welcome to the yuiop installer.\n'
+    printf '\n'
+    printf "yuiop's compiler and examples will be installed to:\n"
+    printf '  %s\n' "${install_dir}"
+
+    printf "Type 'y' to confirm. [yN] "
+    read answer
+    case "${answer}" in
+        [Yy]) ;;
+        *)
+            printf 'Not confirmed. Exiting without installing yuiop.\n'
+            exit 0
+            ;;
+    esac
+    printf '\n'
+
+    git clone https://github.com/strager/yuiop.git "${install_dir}"
+    if [ "${?}" -ne 0 ]; then
+        printf 'fatal: yuiop installation failed.\n' >&2
+        exit 1
+    fi
+
+    printf '\n'
+    printf 'yuiop installed successfully.\n'
+    printf 'Run the following command in your shell to\n'
+    printf 'enter the yuiop installation:\n'
+    printf '  . ./yuiop/=\n'
+
+    exit 0
+}

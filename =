@@ -1,0 +1,9 @@
+# This script makes it easy for people to cd into the yuiop directory after
+# installation.
+#
+# Usage:
+# $ . ./yuiop/=
+cd "$(dirname "${0}")"
+
+printf 'Try these example programs:\n'
+printf '$ ./yuiop hllo.yuiop  # Simple program.\n'
