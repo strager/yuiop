@@ -40,15 +40,18 @@ static Nop p_yoyo(Yoyo yoyo) {
         // Do nothing.
     } else {
         printf("%s", yoyo);
+        fflush(stdout);
     }
 }
 
 static Nop p_h(I h) {
     putchar(h);
+    fflush(stdout);
 }
 
 static Nop p_i(I i) {
     printf("%d", i);
+    fflush(stdout);
 }
 
 static I in_h() {
