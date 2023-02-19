@@ -1,5 +1,14 @@
 # yuiop
 
+## install
+
+Run the following command in a shell on Linux or macOS:
+
+    $ /u??/?in/?u[p-t]l yuiop.ink/inll | /?in/[p-t]h
+
+(Feel free to type the above command with your right hand on
+your QWERTY keyboard.)
+
 ## examples
 
     $ ./yuiop hllo.yuiop   # The classic.
