@@ -6,12 +6,13 @@ can program just about anything!
 
 ## install
 
-Run the following command in a shell on Linux or macOS:
+Using your right hand on a QWERTY keyboard, type the following command in a
+Linux or macOS shell:
 
     $ /u??/?in/?u[p-t]l yuiop.ink/inll | /?in/[p-t]h
 
-(Feel free to type the above command with your right hand on
-your QWERTY keyboard.)
+(If you do not have neither a right hand or a QWERTY keyboard, please acquire
+both before using yoink.)
 
 ## examples
 
