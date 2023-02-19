@@ -4,13 +4,52 @@ set -e
 set -u
 
 cat >/tmp/yuiop.h <<EOF
-typedef int i;
-#define mn main
+#include <stdio.h>
 
-int p(const char*, ...) asm("_printf");
+#define no_yoyo ((Yoyo)0)
+#define loop for (;;)
+#define on if
+#define noloop break
+
+typedef int I;
+typedef void Nop;
+typedef char* Yoyo;
+
+static Nop p_yoyo(Yoyo yoyo) {
+    if (yoyo == no_yoyo) {
+        // Do nothing.
+    } else {
+        printf("%s", yoyo);
+    }
+}
+
+static Nop p_i(I h) {
+    putchar(h);
+}
+
+static int g_argc;
+static Yoyo* g_argv;
+
+static Yoyo ui(I i) {
+    if (i >= g_argc) {
+        return no_yoyo;
+    }
+    return g_argv[i];
+}
+
+// Entry point, which should be defined by the user program:
+Nop mn();
+
+int main(int argc, char** argv) {
+    g_argc = argc;
+    g_argv = argv;
+
+    mn();
+    return 0;
+}
 EOF
 
-tr -c -d '67890-=yuiop[]hjkl;nm,./^&*()_+YUIOP{}|HJKL:"NM<>? '\'\\ <"${1}" \
+tr -c -d \'' \n\t67890=yuiop[]hjkl;nm,./^&*()_+YUIOP{}|HJKL:"NM<>?\\-' <"${1}" \
     | cc -include /tmp/yuiop.h -o /tmp/yuiop.exe -x c /dev/stdin
 shift
 exec /tmp/yuiop.exe "${@:+${@}}"
