@@ -5,8 +5,8 @@ set -u
 
 cat >/tmp/yuiop.h <<EOF
 #include <stdio.h>
+#include <stdlib.h>
 
-#define no_yoyo ((Yoyo)0)
 #define loop for (;;)
 #define on if
 #define noloop break
@@ -14,6 +14,9 @@ cat >/tmp/yuiop.h <<EOF
 typedef int I;
 typedef void Nop;
 typedef char* Yoyo;
+
+static Yoyo no_yoyo = (Yoyo)NULL;
+static I no_h = EOF;
 
 static Nop p_yoyo(Yoyo yoyo) {
     if (yoyo == no_yoyo) {
@@ -27,6 +30,10 @@ static Nop p_i(I h) {
     putchar(h);
 }
 
+static I in_h() {
+    return getchar();
+}
+
 static int g_argc;
 static Yoyo* g_argv;
 
@@ -35,6 +42,38 @@ static Yoyo ui(I i) {
         return no_yoyo;
     }
     return g_argv[i];
+}
+
+static Yoyo lo_yoyo(Yoyo nom) {
+    FILE* file = fopen(nom, "rb");
+    if (file == NULL) {
+        return no_yoyo;
+    }
+
+    size_t buffer_size = 1024;
+    char* yoyo = malloc(buffer_size);
+    size_t total_read = 0;
+    for (;;) {
+        size_t size = fread(yoyo + total_read, 1, buffer_size, file);
+        if (size == 0) {
+            break;
+        }
+        total_read += size;
+        yoyo = reallocf(yoyo, total_read + buffer_size);
+    }
+    yoyo[total_read] = '\0';
+
+    if (ferror(file)) {
+        free(yoyo);
+        return no_yoyo;
+    }
+    fclose(file);
+
+    return yoyo;
+}
+
+_Noreturn Nop no_mo(I ok) {
+    exit(ok);
 }
 
 // Entry point, which should be defined by the user program:
