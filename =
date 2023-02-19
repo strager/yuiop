@@ -6,4 +6,4 @@
 cd "$(dirname "${0}")"
 
 printf 'Try these example programs:\n'
-printf '$ ./yuiop hllo.yuiop  # Simple program.\n'
+grep '^    $ ' README.md

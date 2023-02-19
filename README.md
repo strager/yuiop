@@ -1,5 +1,12 @@
 # yuiop
 
+## examples
+
+    $ ./yuiop hllo.yuiop   # The classic.
+    $ ./yuiop put.yuiop    # 'cat' clone.
+    $ ./yuiop yup.yuiop    # 'yes' clone. Press CTRL-C.
+    $ ./yuiop ho.yuiop hi  # 'echo' clone.
+
 ## statements
 
 ### `loop`
