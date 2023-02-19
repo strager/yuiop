@@ -6,8 +6,8 @@ Nop mn() {
             noloop;
         }
         p_yoyo(yo);
-        p_i(' ');
+        p_h(' ');
         ++i;
     }
-    p_i('\n');
+    p_h('\n');
 }

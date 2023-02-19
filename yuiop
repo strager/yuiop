@@ -26,7 +26,7 @@ static Nop p_yoyo(Yoyo yoyo) {
     }
 }
 
-static Nop p_i(I h) {
+static Nop p_h(I h) {
     putchar(h);
 }
 

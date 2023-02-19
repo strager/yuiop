@@ -4,7 +4,7 @@ Nop in_ou() {
         on (in == no_h) {
             noloop;
         }
-        p_i(in);
+        p_h(in);
     }
 }
 
@@ -25,7 +25,7 @@ Nop mn() {
         on (l == no_yoyo) {
             p_yoyo("oh no: ");
             p_yoyo(yo);
-            p_i('\n');
+            p_h('\n');
             noloop;
         }
         p_yoyo(l);

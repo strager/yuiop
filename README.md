@@ -19,11 +19,10 @@ Unit type. Only allowed as the return type of a function.
 
 ### output
 
-`Nop p_i(I h)`: Print the character `h`. Note that `h` is
+`Nop p_h(I h)`: Print the character `h`. Note that `h` is
 not printed as a decimal number; `h(69)` prints the letter
 E.
-Mneumonic: **P**rint **I**nteger
-TODO: Rename to `p_h`.
+Mneumonic: **P**rint c**H**aracter
 
 `Nop p_yoyo(Yoyo yoyo)`: Print each character in `yoyo`, excluding the
 null terminator. Prints nothing if `yoyo` is `no_yoyo`.
