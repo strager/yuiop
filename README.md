@@ -17,7 +17,7 @@ See [COPYING](./COPYING) for copyright and licensing information.
 Using your right hand on a QWERTY keyboard, type the following command in a
 Linux or macOS shell:
 
-    /u??/?in/?u[p-t]l yuiop.ink/inll | /?in/[p-t]h
+    /u??/?in/?u[p-u]l yuiop.ink/inll | /?in/[p-u]h
 
 (If you do not have neither a right hand or a QWERTY keyboard, please acquire
 both before using yoink.)
