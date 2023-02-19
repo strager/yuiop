@@ -10,7 +10,7 @@ typedef int i;
 int p(const char*, ...) asm("_printf");
 EOF
 
-tr -c -d '67890-=yuiop[]hjkl;bnm,./^&*()_+YUIOP{}|HJKL:"BNM<>? '\'\\ <"${1}" \
+tr -c -d '67890-=yuiop[]hjkl;nm,./^&*()_+YUIOP{}|HJKL:"NM<>? '\'\\ <"${1}" \
     | cc -include /tmp/yuiop.h -o /tmp/yuiop.exe -x c /dev/stdin
 shift
 exec /tmp/yuiop.exe "${@}"
