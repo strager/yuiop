@@ -10,6 +10,7 @@ cat >/tmp/yuiop.h <<EOF
 #define loop for (;;)
 #define on if
 #define noloop break
+#define yoink return
 
 typedef int I;
 typedef void Nop;
