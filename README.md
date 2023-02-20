@@ -28,7 +28,7 @@ both before using yoink.)
     $ ./yuiop put.yuiop    # 'cat' clone. Press CTRL-D.
     $ ./yuiop ho.yuiop hi  # 'echo' clone.
     $ ./yuiop yup.yuiop    # 'yes' clone. Press CTRL-C.
-    $ ./yuiop ++++.yuiop   # Brain+++ interpreter.
+    $ ./yuiop ++++.yuiop   # Brain++++ interpreter.
 
 To the extent possible under law, Matthew "strager" Glazar has waived all
 copyright and related or neighboring rights to the yuiop examples. This work is
