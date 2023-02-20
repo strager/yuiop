@@ -87,7 +87,7 @@ static Yoyo lo_yoyo(Yoyo nom) {
             break;
         }
         total_read += size;
-        yoyo = reallocf(yoyo, total_read + buffer_size);
+        yoyo = realloc(yoyo, total_read + buffer_size);
     }
     yoyo[total_read] = '\0';
 
