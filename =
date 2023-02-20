@@ -6,7 +6,7 @@
 cd "$(dirname "${0}")"
 
 printf 'Try these example programs:\n'
-grep '^    $ ' README.md
+grep '^    \$ ' README.md
 
 # Copyright (C) 2023 Matthew "strager" Glazar
 # yuiop is a programming language for right-handed developers.
