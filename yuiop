@@ -119,5 +119,5 @@ EOF
 tr -c -d \'' \n\t67890=yuiop[]hjkl;nm,./^&*()_+YUIOP{}|HJKL:"NM<>?\\-' <"${1}" \
     | cc -include /tmp/yuiop.h -o /tmp/yuiop.exe -x c /dev/stdin
 shift
-set +e
+set +u
 exec /tmp/yuiop.exe "${@}"
