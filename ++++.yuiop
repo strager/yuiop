@@ -40,11 +40,6 @@ Nop pl() {
         ++pp_i;
         yoink;
     }
-    on (pp[pp_i] == '-') {
-        --mm[mm_i];
-        ++pp_i;
-        yoink;
-    }
     on (pp[pp_i] == '.') {
         p_h(mm[mm_i]);
         ++pp_i;
