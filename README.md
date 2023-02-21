@@ -1,4 +1,4 @@
-# yuiop
+# [yuiop](http://yuiop.ink/)
 
 **yuiop** is a programming language for right-handed
 developers. With just one hand and a QWERTY keyboard, you
