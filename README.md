@@ -6,7 +6,7 @@ can program just about anything!
 
 ```c
 Nop mn() {
-    p_yoyo("hllo, you\n");
+    p_yoyo("Oi, you\n");
 }
 ```
 
