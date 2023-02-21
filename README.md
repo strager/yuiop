@@ -10,6 +10,8 @@ Nop mn() {
 }
 ```
 
+[![yuiop video overview](https://img.youtube.com/vi/9nDoe99DYTA/0.jpg)](https://www.youtube.com/watch?v=9nDoe99DYTA)
+
 See [COPYING](./COPYING) for copyright and licensing information.
 
 ## install
