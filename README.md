@@ -28,7 +28,7 @@ both before using yoink.)
 
 ## examples
 
-    $ ./yuiop hllo.yuiop     # The classic.
+    $ ./yuiop oi.yuiop       # The classic.
     $ ./yuiop pup.yuiop      # 'cat' clone. Press CTRL-D.
     $ ./yuiop honk.yuiop hi  # 'echo' clone.
     $ ./yuiop yup.yuiop      # 'yes' clone. Press CTRL-C.
