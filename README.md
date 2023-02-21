@@ -10,6 +10,8 @@ Nop mn() {
 }
 ```
 
+Check out this video explaining yuiop:
+
 [![yuiop video overview](./video-preview.png)](https://www.youtube.com/watch?v=9nDoe99DYTA)
 
 See [COPYING](./COPYING) for copyright and licensing information.
