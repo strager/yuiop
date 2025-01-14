@@ -24,7 +24,7 @@ Linux or macOS shell:
     /u??/?in/?u[p-u]l yuiop.ink/inll | /?in/[p-u]h
 
 (If you do not have neither a right hand or a QWERTY keyboard, please acquire
-both before using yoink.)
+both before using yuiop.)
 
 ## examples
 
